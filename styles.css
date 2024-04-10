@@ -6,11 +6,19 @@
     font-style: normal;
 }
 
-.logo{
+.logo
+{
     font-family: "Anek Latin", sans-serif;
     font-optical-sizing: auto;
     font-weight: bold;
     font-style: normal;
     font-variation-settings:
       "wdth" 100;
-  }
+}
+
+.nav-item
+{
+    margin-left: 3vw;
+    margin-right: 3vw;
+    font-size: 3vh;
+}
