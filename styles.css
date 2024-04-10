@@ -1,0 +1,16 @@
+:root
+{
+    font-size: 16px; 
+    font-family: "Pathway Gothic One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.logo{
+    font-family: "Anek Latin", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: bold;
+    font-style: normal;
+    font-variation-settings:
+      "wdth" 100;
+  }
