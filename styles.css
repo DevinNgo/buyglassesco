@@ -1,31 +1,22 @@
-:root
+.logo
 {
-    font-size: 16px; 
-    font-family: "Pathway Gothic One", sans-serif;
-    font-weight: 400;
+    font-family: "Anek Latin", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: bold;
     font-style: normal;
-}
-/*
-.wrapper
-{
-    text-align: center;
-    margin-left: auto;
-    margin-right: auto;
+    font-variation-settings:
+      "wdth" 100;
 }
 
-.parent
+.nav-item
 {
-    width: 30%;
-    margin: 20px;
-    height: 280px;
-    overflow: hidden;
-    position: relative;
-    display: inline-block;
-    cursor: pointer;
-    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.5);
-    border-radius: 10px;
+    font-size: 3vh;
 }
-*/
+
+.HideOnMobile
+{
+    display: none
+}
 
 .wrapper
 {
@@ -47,7 +38,7 @@
     cursor: pointer;
 }
 
-.parent img{
+.parent figure{
     display: block;
     width: 100%;
     border-radius: 5px;
@@ -59,24 +50,12 @@
     z-index: 2;
 }
 
-.logo
+figcaption
 {
-    font-family: "Anek Latin", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: bold;
+    font-size: 32px; 
+    font-family: "Pathway Gothic One", sans-serif;
+    font-weight: 400;
     font-style: normal;
-    font-variation-settings:
-      "wdth" 100;
-}
-
-.nav-item
-{
-    font-size: 3vh;
-}
-
-.HideOnMobile
-{
-    display: none
 }
 
 @media only screen and (min-width: 768px)
