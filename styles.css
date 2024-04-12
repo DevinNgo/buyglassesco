@@ -13,19 +13,20 @@
     font-size: 3vh;
 }
 
-.navbar {
+.navbar 
+{
     position: fixed;
     top: 0;
     width: 100%;
     z-index: 999; 
-    background-color: rgba(255, 255, 255, 0.5);
+    background-image: linear-gradient(rgba(255,255,255,0.9), rgba(255,255,255,0.7), rgba(255,255,255,0.5), rgba(255,255,255,0));
 }
 
 .drop-menu-lg .dropdown-menu {
     position: absolute;
     top: 100%;
     right: 0;
-    z-index: 1000; /* Ensure the dropdown appears above other elements */
+    z-index: 1000; 
 }
 
 .wrapper
@@ -38,13 +39,14 @@
     justify-content: space-around;
     flex-wrap: wrap;
 }
+
 .parent
 {
-    width: 90%;
+    width: 80%;
     margin: 0 10px;
-    margin-bottom: 15%;
+    margin-bottom: 10%;
     box-shadow: 0 0 20px 2px rgba(0, 0, 0, .1);
-    transition: 1s;
+    transition: .6s;
     cursor: pointer;
 }
 
@@ -56,7 +58,7 @@
 
 .parent:hover
 {
-    transform: scale(1.2);
+    transform: scale(1.1);
     z-index: 2;
 }
 
@@ -76,7 +78,7 @@ figcaption
         margin: 0 10px;
         margin-bottom: 5%;
         box-shadow: 0 0 20px 2px rgba(0, 0, 0, .1);
-        transition: 1s;
+        transition: .6s;
         cursor: pointer;
     }
 
