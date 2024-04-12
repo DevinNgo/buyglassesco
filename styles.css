@@ -5,19 +5,7 @@
     font-weight: 400;
     font-style: normal;
 }
-
-.wrapper
-{
-    margin-top: 3%;
-}
-
-html,
-body 
-{
-    margin: 0;
-    padding: 0;
-}
-
+/*
 .wrapper
 {
     text-align: center;
@@ -37,49 +25,38 @@ body
     box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.5);
     border-radius: 10px;
 }
+*/
 
-
-.child
+.wrapper
 {
-    height:100%;
+    width: 90%;
+    padding: 20px;
+    margin: 100px auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+.parent
+{
+    width: 90%;
+    margin: 0 10px;
+    margin-bottom: 15%;
+    box-shadow: 0 0 20px 2px rgba(0, 0, 0, .1);
+    transition: 1s;
+    cursor: pointer;
+}
+
+.parent img{
+    display: block;
     width: 100%;
-    background-size: cover;
-    transition: all 1.1s;
+    border-radius: 5px;
 }
 
-.bg-one
+.parent:hover
 {
-    background-image: url(images/glasses1.png);
-}
-
-.bg-two
-{
-    background-image: url(images/glasses2.png);
-}
-
-.bg-three
-{
-    background-image: url(images/glasses3.png);
-}
-
-.bg-four
-{
-    background-image: url(images/glasses4.png);
-}
-
-.bg-five
-{
-    background-image: url(images/glasses5.png);
-}
-
-.bg-six
-{
-    background-image: url(images/glasses6.png);
-}
-
-.parent:hover .child
-{
-    transform: scale(1.2);
+    transform: scale(1.3);
+    z-index: 2;
 }
 
 .logo
@@ -109,4 +86,15 @@ body
     {
         display: initial;
     }
+
+    .parent
+    {
+        width: 25%;
+        margin: 0 10px;
+        margin-bottom: 5%;
+        box-shadow: 0 0 20px 2px rgba(0, 0, 0, .1);
+        transition: 1s;
+        cursor: pointer;
+    }
+
 }
