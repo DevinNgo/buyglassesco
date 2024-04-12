@@ -6,6 +6,82 @@
     font-style: normal;
 }
 
+.wrapper
+{
+    margin-top: 3%;
+}
+
+html,
+body 
+{
+    margin: 0;
+    padding: 0;
+}
+
+.wrapper
+{
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.parent
+{
+    width: 30%;
+    margin: 20px;
+    height: 280px;
+    overflow: hidden;
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+}
+
+
+.child
+{
+    height:100%;
+    width: 100%;
+    background-size: cover;
+    transition: all 1.1s;
+}
+
+.bg-one
+{
+    background-image: url(images/glasses1.png);
+}
+
+.bg-two
+{
+    background-image: url(images/glasses2.png);
+}
+
+.bg-three
+{
+    background-image: url(images/glasses3.png);
+}
+
+.bg-four
+{
+    background-image: url(images/glasses4.png);
+}
+
+.bg-five
+{
+    background-image: url(images/glasses5.png);
+}
+
+.bg-six
+{
+    background-image: url(images/glasses6.png);
+}
+
+.parent:hover .child
+{
+    transform: scale(1.2);
+}
+
 .logo
 {
     font-family: "Anek Latin", sans-serif;
@@ -19,4 +95,18 @@
 .nav-item
 {
     font-size: 3vh;
+}
+
+.HideOnMobile
+{
+    display: none
+}
+
+@media only screen and (min-width: 768px)
+{
+    /* For desktop */
+    .HideOnMobile 
+    {
+        display: initial;
+    }
 }
