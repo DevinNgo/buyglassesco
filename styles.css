@@ -20,11 +20,6 @@
     z-index: 1000; /* Ensure the dropdown appears above other elements */
 }
 
-.HideOnMobile
-{
-    display: none;
-}
-
 .wrapper
 {
     width: 90%;
@@ -67,12 +62,6 @@ figcaption
 
 @media only screen and (min-width: 768px)
 {
-    /* For desktop */
-    .HideOnMobile 
-    {
-        display: initial;
-    }
-
     .parent
     {
         width: 25%;
