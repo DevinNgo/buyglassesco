@@ -13,9 +13,16 @@
     font-size: 3vh;
 }
 
+.drop-menu-lg .dropdown-menu {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    z-index: 1000; /* Ensure the dropdown appears above other elements */
+}
+
 .HideOnMobile
 {
-    display: none
+    display: none;
 }
 
 .wrapper
