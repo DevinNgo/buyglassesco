@@ -47,9 +47,6 @@
     width: 80%;
     margin: 0 10px;
     margin-bottom: 10%;
-    box-shadow: 0 0 20px 2px rgba(0, 0, 0, .1);
-    transition: .6s;
-    cursor: pointer;
 }
 
 .parent figure{
@@ -58,7 +55,13 @@
     border-radius: 5px;
 }
 
-.parent:hover
+.figure img
+{
+    cursor: pointer;
+    transition: .6s;
+}
+
+.parent figure img:hover
 {
     transform: scale(1.1);
     z-index: 2;
@@ -79,9 +82,6 @@ figcaption
         width: 25%;
         margin: 0 10px;
         margin-bottom: 5%;
-        box-shadow: 0 0 20px 2px rgba(0, 0, 0, .1);
-        transition: .6s;
-        cursor: pointer;
     }
 
 }
