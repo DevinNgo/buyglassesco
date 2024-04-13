@@ -47,7 +47,7 @@
     width: 80%;
     margin: 0 10px;
     margin-bottom: 10%;
-    transition: 1.2s;
+    transition: 1s;
 }
 
 .parent figure{
@@ -83,7 +83,7 @@ figcaption
         width: 25%;
         margin: 0 10px;
         margin-bottom: 5%;
-        transition: 1.2s;
+        transition: 1s;
     }
 
 }
