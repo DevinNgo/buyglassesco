@@ -15,6 +15,13 @@
     font-size: 3vh;
 }
 
+#cart-num
+{
+    font-family: "Anek Latin", sans-serif;
+    font-size: 24px;
+    margin-left: 10px;
+}
+
 .navbar 
 {
     position: fixed;
@@ -31,9 +38,9 @@
     z-index: 1000; 
 }
 
-.wrapper
+.product-list
 {
-    width: 90%;
+    width: 100%;
     padding: 20px;
     margin: 100px auto;
     display: flex;
@@ -42,15 +49,20 @@
     flex-wrap: wrap;
 }
 
-.parent
+button
+{
+    background-color: rgba(0, 0, 0, 0);
+    border-color: rgba(0, 0, 0, 0);
+}
+
+.item
 {
     width: 80%;
-    margin: 0 10px;
-    margin-bottom: 10%;
+    margin: 0 10px 2%;
     transition: 1s;
 }
 
-.parent figure{
+.item figure{
     display: block;
     width: 100%;
     border-radius: 5px;
@@ -62,7 +74,7 @@
     transition: .8s;
 }
 
-.parent figure img:hover
+.item figure img:hover
 {
     transform: scale(1.1);
     z-index: 2;
@@ -78,11 +90,10 @@ figcaption
 
 @media only screen and (min-width: 768px)
 {
-    .parent
+    .item
     {
         width: 25%;
-        margin: 0 10px;
-        margin-bottom: 5%;
+        margin: 0 10px 2%;
         transition: 1s;
     }
 
