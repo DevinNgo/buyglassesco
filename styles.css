@@ -47,6 +47,7 @@
     width: 80%;
     margin: 0 10px;
     margin-bottom: 10%;
+    transition: 1.2s;
 }
 
 .parent figure{
@@ -58,7 +59,7 @@
 .figure img
 {
     cursor: pointer;
-    transition: .6s;
+    transition: .8s;
 }
 
 .parent figure img:hover
@@ -82,6 +83,7 @@ figcaption
         width: 25%;
         margin: 0 10px;
         margin-bottom: 5%;
+        transition: 1.2s;
     }
 
 }
