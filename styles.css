@@ -15,6 +15,17 @@
     font-size: 3vh;
 }
 
+.icon-cart
+{
+    color: #595959;
+}
+
+.icon-cart:hover
+{
+    cursor: pointer;
+    color: black;
+}
+
 #cart-num
 {
     font-family: "Anek Latin", sans-serif;
@@ -28,13 +39,12 @@
     top: 0;
     width: 100%;
     z-index: 999; 
-    background-image: linear-gradient(rgba(255,255,255,0.9), rgba(255,255,255,0.8), rgba(255,255,255,0.6), rgba(255,255,255,0.3), rgba(255,255,255,0));
+    background-image: linear-gradient(rgba(255,255,255,0.9), rgba(255,255,255,0.8), rgba(255,255,255,0.6), rgba(255,255,255,0.4), rgba(255,255,255,0));
 }
 
 .drop-menu-lg .dropdown-menu {
     position: absolute;
     top: 100%;
-    right: 0;
     z-index: 1000; 
 }
 
@@ -88,16 +98,54 @@ figcaption
     background-color: white;
     color: #353432;
     position: fixed;
-    inset: 10% 0 0 auto; 
+    inset: 0 0 0 auto; 
     display: grid;
     grid-template-rows: 70px 1fr 70px;
     transition: .5s;
+    z-index: 1000;
+    border-left: solid #353432 1px;
 }
 
-.cartTab h1{
+.home-cart
+{
+    inset: 0 -400px 0 auto; 
+}
+
+body.showCart .cartTab
+{
+    inset: 0 0 0 auto; 
+}
+
+body.showCart .container
+{
+    transform: translateX(-250px);
+}
+
+.cartTab h1
+{
     padding: 20px;
     margin: 0;
     font-weight: 300;
+}
+
+.cartTab .cart-btn
+{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.cartTab .cart-btn button
+{
+    background-color: #E8BC0E;
+    border: none;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.cartTab .cart-btn .close
+{
+    background-color: #eee;
+
 }
 
 .cartTab .listCart .product img
@@ -135,6 +183,7 @@ body::-webkit-scrollbar
 {
     width:0;
 }
+
 
 @media only screen and (min-width: 768px)
 {
