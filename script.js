@@ -1,9 +1,10 @@
 let iconCart = document.querySelector('.icon-cart');
 let body = document.querySelector('body');
 let closeCart = document.querySelector('.close');
+let checkOut = document.querySelector('.checkOut');
 let listProductHTML = document.querySelector('.product-list');
 let listCartHTML = document.querySelector('.listCart');
-let iconCartSpan = document.querySelector('.icon-cart span')
+let iconCartSpan = document.querySelector('.icon-cart span');
 
 let listProducts = [];
 let carts = [];
@@ -43,6 +44,9 @@ if(document.body.classList.contains('home')) {
     })
     closeCart.addEventListener('click', () => {
         body.classList.toggle('showCart');
+    })
+    checkOut.addEventListener('click', () => {
+        location.href = "bag.html";
     })
 }
 
@@ -84,6 +88,7 @@ const addCartToHTML = () =>
             totalQuantity = totalQuantity + cart.quantity;
             let newCart = document.createElement('div');
             newCart.classList.add('product');
+            newCart.dataset.id = cart.product_id;
             let positionProduct = listProducts.findIndex((value) => value.id == cart.product_id);
             let info = listProducts[positionProduct];
             newCart.innerHTML = `
@@ -94,18 +99,60 @@ const addCartToHTML = () =>
                     ${info.name}
                 </div>
                 <div class="totalPrice">
-                    ${info.price}
+                    $${info.price}
                 </div>
                 <div class="quantity">
-                    <span class="minus"><i class="bi bi-dash-circle-fill"></i></span>
+                    <span class="minus"><</span>
                     <span>${cart.quantity}</span>
-                    <span class="plus"><i class="bi bi-plus-circle-fill"></i></span>
+                    <span class="plus">></span>
                 </div>
                 `;
             listCartHTML.appendChild(newCart);
         })
     }
     iconCartSpan.innerText = totalQuantity;
+}
+
+listCartHTML.addEventListener('click', (event) => {
+    let positionClick = event.target;
+    if (positionClick.classList.contains('minus') || positionClick.classList.contains('plus'))
+    {
+        let product_id = positionClick.parentElement.parentElement.dataset.id;
+        let type = 'minus';
+        if (positionClick.classList.contains('plus'))
+        {
+            type = 'plus';
+        }
+        changeQuantity(product_id, type);
+    }
+})
+
+const changeQuantity = (product_id, type) => 
+{
+    let positionItemInCart = carts.findIndex((value) => value.product_id == product_id)
+    if (positionItemInCart >= 0)
+    {
+        switch (type) 
+        {
+            case 'plus':
+                carts[positionItemInCart].quantity = carts[positionItemInCart].quantity + 1;
+                break;
+            
+            default:
+                let valueChange = carts[positionItemInCart].quantity - 1;
+                if (valueChange > 0) 
+                {
+                    carts[positionItemInCart].quantity = valueChange;
+                }
+                else
+                {
+                    carts.splice(positionItemInCart, 1);
+                }
+                break;
+        }
+    }
+    addCartToMemory();
+    addCartToHTML();
 }
 
 const initApp = () =>

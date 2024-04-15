@@ -104,6 +104,7 @@ figcaption
     transition: .5s;
     z-index: 1000;
     border-left: solid #353432 1px;
+    user-select: none;
 }
 
 .home-cart
