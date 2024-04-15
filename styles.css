@@ -42,17 +42,11 @@
 {
     width: 100%;
     padding: 20px;
-    margin: 100px auto;
+    margin: 70px auto;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     flex-wrap: wrap;
-}
-
-button
-{
-    background-color: rgba(0, 0, 0, 0);
-    border-color: rgba(0, 0, 0, 0);
 }
 
 .product
@@ -108,7 +102,7 @@ figcaption
 
 .cartTab .listCart .product img
 {
-    width: 200%;
+    width: 100%;
 }
 
 .cartTab .listcart .product
@@ -151,4 +145,8 @@ body::-webkit-scrollbar
         transition: 1s;
     }
 
+    .cartTab .listCart .product img
+    {
+        width: 200%;
+    }
 }

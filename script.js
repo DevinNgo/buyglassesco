@@ -1,5 +1,7 @@
 let listProductHTML = document.querySelector('.product-list');
+
 let listProducts = [];
+let carts = [];
 
 const addDataToHTML = () =>
 {
@@ -9,9 +11,10 @@ const addDataToHTML = () =>
         listProducts.forEach(product => {
             let newProduct = document.createElement('div');
             newProduct.classList.add('product');
+            newProduct.dataset.id = product.id;
             newProduct.innerHTML = `
             <figure class="figure">
-                <button><img src="${product.image}" class="figure-img img-fluid rounded"></button>
+                <img src="${product.image}" class="figure-img img-fluid rounded">
                 <figcaption class="figure-caption text-center"><div class="stock">STOCK: ${product.stock}</div><div class="price">$${product.price}</div></figcaption>
             </figure>
             `;
@@ -19,6 +22,15 @@ const addDataToHTML = () =>
         })
     }
 }
+listProductHTML.addEventListener('click', (event) => 
+{
+    let positionClick = event.target;
+    if(positionClick.classList.contains('figure-img')){
+        let product_id = positionClick.parentElement.parentElement.dataset.id;
+        console.log(product_id);
+    }
+})
+
 
 const initApp = () =>
 {
