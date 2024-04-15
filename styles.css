@@ -101,10 +101,19 @@ figcaption
     inset: 0 0 0 auto; 
     display: grid;
     grid-template-rows: 70px 1fr 70px;
-    transition: .5s;
+    transition: 1s;
     z-index: 1000;
     border-left: solid #353432 1px;
-    user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none; 
+    user-select: none; 
+}
+
+.cart-header
+{
+    font-family: "Oswald", sans-serif;
+    font-weight: bold;
+    font-size: 32px;
 }
 
 .home-cart
@@ -126,7 +135,7 @@ body.showCart .container
 {
     padding: 20px;
     margin: 0;
-    font-weight: 300;
+    font-weight: 300;   
 }
 
 .cartTab .cart-btn
@@ -173,6 +182,36 @@ body.showCart .container
 .listCart
 {
     overflow: auto;
+}
+
+.transaction-page
+{
+    margin-top:5%;
+    margin-left:3%;
+    max-width: 60%;
+    font-family: "Oswald", sans-serif;
+}
+
+.form-group
+{
+    margin: 20px;
+}
+
+input
+{
+    font-family: "Pathway Gothic One", sans-serif;    
+    margin: 5px;
+}
+
+.complete
+{
+    margin-left: 25px;
+    cursor: pointer;
+}
+
+.complete:hover
+{
+    color: #595959;
 }
 
 .listCart::-webkit-scrollbar
