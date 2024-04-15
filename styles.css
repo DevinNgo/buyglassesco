@@ -55,14 +55,14 @@ button
     border-color: rgba(0, 0, 0, 0);
 }
 
-.item
+.product
 {
     width: 80%;
     margin: 0 10px 2%;
     transition: 1s;
 }
 
-.item figure{
+.product figure{
     display: block;
     width: 100%;
     border-radius: 5px;
@@ -74,7 +74,7 @@ button
     transition: .8s;
 }
 
-.item figure img:hover
+.product figure img:hover
 {
     transform: scale(1.1);
     z-index: 2;
@@ -88,9 +88,63 @@ figcaption
     font-style: normal;
 }
 
+.cartTab
+{
+    width: 400px;
+    background-color: white;
+    color: #353432;
+    position: fixed;
+    inset: 10% 0 0 auto; 
+    display: grid;
+    grid-template-rows: 70px 1fr 70px;
+    transition: .5s;
+}
+
+.cartTab h1{
+    padding: 20px;
+    margin: 0;
+    font-weight: 300;
+}
+
+.cartTab .listCart .product img
+{
+    width: 200%;
+}
+
+.cartTab .listcart .product
+{
+    display: grid;
+    grid-template-columns: 70px 150px 50px 1fr;
+    gap: 10px;
+    text-align: center;
+    align-items: center;
+}
+
+.listCart .quantity span
+{
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+}
+.listCart
+{
+    overflow: auto;
+}
+
+.listCart::-webkit-scrollbar
+{
+    width:0;
+}
+
+body::-webkit-scrollbar
+{
+    width:0;
+}
+
 @media only screen and (min-width: 768px)
 {
-    .item
+    .product
     {
         width: 25%;
         margin: 0 10px 2%;
