@@ -5,6 +5,8 @@ let checkOut = document.querySelector('.checkOut');
 let listProductHTML = document.querySelector('.product-list');
 let listCartHTML = document.querySelector('.listCart');
 let iconCartSpan = document.querySelector('.icon-cart span');
+let cartHeader = document.querySelector('.cart-header');
+let totalLabel = document.querySelector('.total-label');
 
 let listProducts = [];
 let carts = [];
@@ -82,6 +84,7 @@ const addCartToHTML = () =>
 {
     listCartHTML.innerHTML = '';
     let totalQuantity = 0;
+    let totalPrice = 0;
     if(carts.length > 0)
     {
         carts.forEach(cart => {
@@ -91,6 +94,7 @@ const addCartToHTML = () =>
             newCart.dataset.id = cart.product_id;
             let positionProduct = listProducts.findIndex((value) => value.id == cart.product_id);
             let info = listProducts[positionProduct];
+            totalPrice = totalPrice + info.price * cart.quantity;
             newCart.innerHTML = `
                 <div class="product-image">
                     <img src="${info.image}">
@@ -111,6 +115,10 @@ const addCartToHTML = () =>
         })
     }
     iconCartSpan.innerText = totalQuantity;
+    cartHeader.innerText = `YOUR ORDER (${totalQuantity})`;
+    if(document.body.classList.contains('bag')) {
+        totalLabel.innerText = `TOTAL: $${totalPrice}`;
+    }
 }
 
 listCartHTML.addEventListener('click', (event) => {
