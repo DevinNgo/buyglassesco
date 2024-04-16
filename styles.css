@@ -138,6 +138,15 @@ body.showCart .container
     font-weight: 300;   
 }
 
+.total-label
+{
+    font-size: 16px;
+    font-weight: 500;
+    border-top: 1px solid black;
+    width: 85%;
+    margin: auto;
+}
+
 .cartTab .cart-btn
 {
     display: grid;
@@ -160,7 +169,8 @@ body.showCart .container
 
 .cartTab .transaction-btn .complete
 {
-    background-color: #E8BC0E;
+    background-color: #eee;
+    color: #535353;
     border: none;
     width: 100%;
     font-weight: 500;
@@ -170,8 +180,8 @@ body.showCart .container
 
 .transaction-btn .complete:hover
 {
-    color: #535353;
-    background-color: #eee;
+    color: black;
+    background-color: #E8BC0E;
 }
 
 .cartTab .listCart .product img

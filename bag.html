@@ -46,11 +46,13 @@
         </div>
     </nav>
     <div class="cartTab">
-        <h1 class="cart-header">Your Order</h1>
+        <h1 class="cart-header">Your Order (5)</h1>
         <div class="listCart">
             
         </div>
-        <h2>Total:</h2>
+        <div class = "total-label">
+            <label>TOTAL: $500</label>
+        </div>
         <div class="transaction-btn">
             <button class="complete">COMPLETE TRANSACTION</button>
         </div>
@@ -86,6 +88,19 @@
                     </div>
                 </div>
                 <input type="text" class="form-control" id="delivery-info" placeholder="PHONE">
+            </div>
+            <div class="form-group delivery-form">
+                <label for="delivery-info">PAYMENT</label>
+                <input type="text" class="form-control" id="delivery-info" placeholder="CARD NUMBER">
+                <div class="row">
+                    <div class="col">
+                        <input type="text" class="form-control" id="delivery-info" placeholder="EXPIRATION DATE (MM/YY)">
+                    </div>
+                    <div class="col">
+                        <input type="text" class="form-control" id="delivery-info" placeholder="SECURITY CODE">
+                    </div>
+                </div>
+                <input type="text" class="form-control" id="delivery-info" placeholder="NAME ON CARD">
             </div>
         </form>
     </div>
