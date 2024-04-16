@@ -158,6 +158,22 @@ body.showCart .container
 
 }
 
+.cartTab .transaction-btn .complete
+{
+    background-color: #E8BC0E;
+    border: none;
+    width: 100%;
+    font-weight: 500;
+    font-size: 16px;
+    height: 70px;
+}
+
+.transaction-btn .complete:hover
+{
+    color: #535353;
+    background-color: #eee;
+}
+
 .cartTab .listCart .product img
 {
     width: 100%;
@@ -201,18 +217,7 @@ input
 {
     font-family: "Pathway Gothic One", sans-serif;    
     margin: 5px;
-}
-
-.complete
-{
-    margin-left: 25px;
-    cursor: pointer;
-}
-
-.complete:hover
-{
-    color: #595959;
-}
+} 
 
 .listCart::-webkit-scrollbar
 {

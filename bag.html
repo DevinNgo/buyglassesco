@@ -11,7 +11,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Anek+Latin:wght@100..800&family=Oswald:wght@200..700&family=Pathway+Gothic+One&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
     <title>BUYGLASSESCO</title>
-    <link rel="icon" type="image/x-icon" href="/images/BGC.ico">
+    <link rel="icon" type="image/x-icon" href="/images/BGC.png">
 </head>
 <body class = "bag">
     <nav class="navbar navbar-expand-lg">
@@ -50,42 +50,44 @@
         <div class="listCart">
             
         </div>
-        <div class="cart-btn">
-            <h2>Total:</h2>
+        <h2>Total:</h2>
+        <div class="transaction-btn">
+            <button class="complete">COMPLETE TRANSACTION</button>
         </div>
     </div>
     <div class = "transaction-page">
         <form class="shipping-info">
             <div class="form-group contact-form">
-                <label for="email-contact">Contact</label>
-                <input type="email" class="form-control" id="email-contact" aria-describedby="emailHelp" placeholder="Enter email">
+                <label for="email-contact">CONTACT</label>
+                <input type="email" class="form-control" id="email-contact" aria-describedby="emailHelp" placeholder="EMAIL">
               </div>
             <div class="form-group delivery-form">
-                <label for="delivery-info">Delivery</label>
-                <input type="text" class="form-control" id="delivery-info" placeholder="Country/Region">
+                <label for="delivery-info">DELIVERY</label>
+                <input type="text" class="form-control" id="delivery-info" placeholder="COUNTRY/REGION">
                 <div class="row">
                     <div class="col">
-                        <input type="text" class="form-control" id="delivery-info" placeholder="First name">
+                        <input type="text" class="form-control" id="delivery-info" placeholder="FIRST NAME">
                     </div>
                     <div class="col">
-                        <input type="text" class="form-control" id="delivery-info" placeholder="Last name">
+                        <input type="text" class="form-control" id="delivery-info" placeholder="LAST NAME">
                     </div>
                 </div>
-                <input type="text" class="form-control" id="delivery-info" placeholder="Address">
+                <input type="text" class="form-control" id="delivery-info" placeholder="ADDRESS">
+                <input type="text" class="form-control" id="delivery-info" placeholder="APT/SUITE">
                 <div class="row">
                     <div class="col">
-                        <input type="text" class="form-control" id="delivery-info" placeholder="City">
+                        <input type="text" class="form-control" id="delivery-info" placeholder="CITY">
                     </div>
                     <div class="col">
-                        <input type="text" class="form-control" id="delivery-info" placeholder="State">
+                        <input type="text" class="form-control" id="delivery-info" placeholder="STATE">
                     </div>
                     <div class="col">
                         <input type="text" class="form-control" id="delivery-info" placeholder="ZIP code">
                     </div>
                 </div>
+                <input type="text" class="form-control" id="delivery-info" placeholder="PHONE">
             </div>
         </form>
-        <p class="complete">COMPLETE TRANSACTION</p>
     </div>
     <script src = "script.js"></script>
 </body>
