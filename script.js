@@ -38,7 +38,7 @@ if(document.body.classList.contains('home')) {
         if(positionClick.classList.contains('figure-img')){
             let product_id = positionClick.parentElement.parentElement.dataset.id;
             addToCart(product_id);
-            body.classList.toggle('showCart');
+            body.classList.add('showCart');
         }
     })
     iconCart.addEventListener('click', () => {
@@ -116,9 +116,7 @@ const addCartToHTML = () =>
     }
     iconCartSpan.innerText = totalQuantity;
     cartHeader.innerText = `YOUR ORDER (${totalQuantity})`;
-    if(document.body.classList.contains('bag')) {
-        totalLabel.innerText = `TOTAL: $${totalPrice}`;
-    }
+    totalLabel.innerText = `TOTAL PRICE: $${totalPrice}`;
 }
 
 listCartHTML.addEventListener('click', (event) => {
