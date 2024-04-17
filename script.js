@@ -171,7 +171,7 @@ const initApp = () =>
             if(document.body.classList.contains('home')) {
                 addDataToHTML();
             }
-            // get cart from memory
+            // gets cart from memory
             if (localStorage.getItem('cart'))
             {
                 carts = JSON.parse(localStorage.getItem('cart'));
