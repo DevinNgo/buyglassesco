@@ -243,16 +243,36 @@ input
     margin: 5px;
 } 
 
-.listCart::-webkit-scrollbar
+.payment-info
 {
-    width:0;
+    max-width: 60%;
+}
+
+.listCart::-webkit-scrollbar 
+{
+    width: 10px;
+}
+  
+.listCart::-webkit-scrollbar-track 
+{
+    border-radius: 10px;
+}
+   
+.listCart::-webkit-scrollbar-thumb 
+{
+    background: #acabab; 
+    border-radius: 10px;
+}
+  
+.listCart::-webkit-scrollbar-thumb:hover 
+{
+    background: #636363; 
 }
 
 body::-webkit-scrollbar
 {
     width:0;
 }
-
 
 @media only screen and (min-width: 768px)
 {
