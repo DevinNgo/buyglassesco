@@ -48,6 +48,56 @@
     z-index: 1000; 
 }
 
+#about-us
+{
+    max-height: 80vh;
+    max-width: 60vw;
+    margin-left: 20vw;
+    font-family: "Pathway Gothic One", sans-serif;
+    color: #595959;
+    font-size: 24px;
+}
+
+.about
+{
+    font-family: "Anek Latin", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: bold;
+    font-style: normal;
+    font-variation-settings:
+      "wdth" 100;
+    font-size: 3vh; 
+    color: #595959;
+    margin-top: 10vh;
+}
+
+.mission-statement
+{
+    display:none;
+}
+
+#contact-us
+{
+    max-width: 60vw;
+    margin-left: 20vw;
+    font-family: "Pathway Gothic One", sans-serif;
+    color: #595959;
+    font-size: 24px;
+}
+
+.contact
+{
+    font-family: "Anek Latin", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: bold;
+    font-style: normal;
+    font-variation-settings:
+      "wdth" 100;
+    font-size: 3vh; 
+    color: #595959;
+    margin-top: 5vh;
+}
+
 .product-list
 {
     width: 100%;
@@ -297,5 +347,34 @@ body::-webkit-scrollbar
     .cartTab .listCart .product img
     {
         width: 200%;
+    }
+
+    #about-us
+    {
+        max-height: 90vh;
+        height: 90vh;
+        max-width: 60vw;
+        margin-left: 20vw;
+        font-family: "Pathway Gothic One", sans-serif;
+        color: #595959;
+        font-size: 24px;
+    }
+
+    .mission-statement
+    {
+        display:block;
+    }
+
+    .contact
+    {
+        font-family: "Anek Latin", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: bold;
+        font-style: normal;
+        font-variation-settings:
+        "wdth" 100;
+        font-size: 3vh; 
+        color: #595959;
+        margin-top: 10vh;
     }
 }
