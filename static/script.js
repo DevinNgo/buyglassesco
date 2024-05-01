@@ -7,6 +7,7 @@ let listCartHTML = document.querySelector('.listCart');
 let iconCartSpan = document.querySelector('.icon-cart span');
 let cartHeader = document.querySelector('.cart-header');
 let totalLabel = document.querySelector('.total-label');
+let transaction = document.querySelector('.transaction-btn');
 
 let listProducts = [];
 let carts = [];
@@ -160,6 +161,31 @@ const changeQuantity = (product_id, type) =>
     addCartToMemory();
     addCartToHTML();
 }
+
+if(window.location.pathname == '/bag') {
+    transaction.addEventListener('click', function() {
+        console.log('Cart:', carts);
+        fetch('/stock', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(carts)
+        })
+        .then(response => response.json())
+        .then(data => {
+            console.log('Success:', data); // Log the response from the server
+            carts = [];
+            addCartToMemory();
+            addCartToHTML();
+
+        })
+        .catch((error) => {
+            console.error('Error:', error);
+        });
+    })
+}
+
 
 const initApp = () =>
 {

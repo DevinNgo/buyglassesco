@@ -69,5 +69,26 @@ def submit():
         ))
         conn.commit()
         conn.close()
+                    
         return jsonify({'status': 'success', 'message': 'Transaction completed successfully'})
 
+@bp.route('/stock', methods=['POST'])
+def stock():
+    if request.method == 'POST':
+        data = request.get_json()
+        new_data = []
+
+        import json
+
+        with open('./static/products.json', "r") as file:
+
+            product_data = json.load(file)
+
+        for item in data:
+            index = int(item["product_id"])
+            product_data[index - 1]["stock"] = product_data[index - 1]["stock"] - item["quantity"]
+
+        with open('./static/products.json', "w") as file:
+            json.dump(product_data, file, indent = 4)
+
+        return jsonify({'status': 'success', 'message': 'Stock change completed successfully'})

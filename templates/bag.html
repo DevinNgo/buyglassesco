@@ -146,6 +146,7 @@
             .then(response => response.json())
             .then(data => {
                 console.log('Success:', data); // Log the response from the server
+                // location.href = "/"
             })
             .catch((error) => {
                 console.error('Error:', error);
@@ -153,6 +154,6 @@
         }
     </script>
 
-    <script src="{{ url_for('static', filename='script.js') }}"></script>
+    <script type = "module" src="{{ url_for('static', filename='script.js') }}"></script>
 </body>
 </html>

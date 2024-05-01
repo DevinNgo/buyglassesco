@@ -71,11 +71,6 @@
     margin-top: 10vh;
 }
 
-.mission-statement
-{
-    display:none;
-}
-
 #contact-us
 {
     max-width: 60vw;
@@ -358,11 +353,6 @@ body::-webkit-scrollbar
         font-family: "Pathway Gothic One", sans-serif;
         color: #595959;
         font-size: 24px;
-    }
-
-    .mission-statement
-    {
-        display:block;
     }
 
     .contact
